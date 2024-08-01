@@ -270,7 +270,7 @@ class pm(object):
                     '''if a^r is a numerical attribute'''
                     cpd[t][m][r] = np.zeros((1, 5))
                     for s in [0.0, 0.2, 0.4, 0.6]:
-                        cpd[t][m][r][0, int(s * 5)] = np.sum( (x[locate_x_tm, r] >= s - 0.0) * (x[locate_x_tm, r] < s))
+                        cpd[t][m][r][0, int(s * 5)] = np.sum( (x[locate_x_tm, r] >= s - 0.0) * (x[locate_x_tm, r] < s + 0.2))
                     cpd[t][m][r][0, 4] = no_x_tm - np.sum(cpd[t][m][r])
                     cpd[t][m][r] /= no_x_tm
 
